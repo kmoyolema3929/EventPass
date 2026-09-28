@@ -1,0 +1,13 @@
+/* Ajuste de altura e imágenes para el carrusel principal */
+.carousel-img {
+  height: 520px;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+/* Formato de la tarjeta flotante sobre la imagen */
+.carousel-caption {
+  bottom: 2.5rem;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
