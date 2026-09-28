@@ -96,3 +96,44 @@ window.eliminarDelCarrito = function(index) {
 
 
 document.addEventListener('DOMContentLoaded', renderizarBoletos);
+
+const botonPagar = document.querySelector('.btn-success');
+
+botonPagar.addEventListener('click', function(evento) {
+    evento.preventDefault();
+
+    if (carrito.length === 0) {
+        alert("Tu carrito está vacío. Selecciona al menos un boleto antes de pagar.");
+        return;
+    }
+
+    const inputsPago = document.querySelectorAll('.card.p-4 input');
+    let formularioValido = true;
+
+    inputsPago.forEach(input => {
+        if (input.value.trim() === '') {
+            formularioValido = false;
+        }
+    });
+
+    if (!formularioValido) {
+        alert("Por favor, completa todos los datos de tu tarjeta para procesar el pago.");
+        return;
+    }
+
+    alert("Procesando pago...");
+    
+    const columnaDerecha = document.querySelector('.col-md-5');
+    columnaDerecha.innerHTML = `
+        <div class="card p-4 shadow-sm text-center border-success">
+            <h4 class="text-success fw-bold mb-3">¡Compra Exitosa!</h4>
+            <p>Tus boletos han sido confirmados.</p>
+            <div class="my-4">
+                <!-- Generamos un código QR dinámico -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Ticket-${Date.now()}" alt="Código QR de Entrada" class="img-fluid border p-2 rounded">
+            </div>
+            <p class="small text-muted">Presenta este código QR en la entrada del evento.</p>
+            <button class="btn btn-outline-success mt-2" onclick="location.reload()">Comprar más boletos</button>
+        </div>
+    `;
+});
