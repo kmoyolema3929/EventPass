@@ -121,19 +121,42 @@ botonPagar.addEventListener('click', function(evento) {
         return;
     }
 
-    alert("Procesando pago...");
-    
+    if (!formularioValido) {
+        alert("Por favor, completa todos los datos de tu tarjeta para procesar el pago.");
+        return;
+    }
+
     const columnaDerecha = document.querySelector('.col-md-5');
+
+    // 1. Mostrar estado de "Procesando" con un spinner
     columnaDerecha.innerHTML = `
-        <div class="card p-4 shadow-sm text-center border-success">
-            <h4 class="text-success fw-bold mb-3">¡Compra Exitosa!</h4>
-            <p>Tus boletos han sido confirmados.</p>
+        <div class="card p-4 shadow-sm text-center">
             <div class="my-4">
-                <!-- Generamos un código QR dinámico -->
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Ticket-${Date.now()}" alt="Código QR de Entrada" class="img-fluid border p-2 rounded">
+                <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status"></div>
             </div>
-            <p class="small text-muted">Presenta este código QR en la entrada del evento.</p>
-            <button class="btn btn-outline-success mt-2" onclick="location.reload()">Comprar más boletos</button>
+            <h4 class="fw-bold mt-3">Procesando pago...</h4>
+            <p class="text-muted">Conectando con el banco, por favor no cierres esta ventana.</p>
         </div>
     `;
+
+    // 2. Usar setTimeout para esperar 2.5 segundos antes de mostrar el QR
+    setTimeout(() => {
+        // Vaciamos el carrito local para limpiar la compra
+        carrito = [];
+        actualizarCarrito();
+        localStorage.removeItem('carrito');
+
+        // Mostrar la pantalla de éxito final
+        columnaDerecha.innerHTML = `
+            <div class="card p-4 shadow-sm text-center border-success">
+                <h4 class="text-success fw-bold mb-3">¡Compra Exitosa!</h4>
+                <p>Tus boletos han sido confirmados.</p>
+                <div class="my-4">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Ticket-${Date.now()}" alt="Código QR de Entrada" class="img-fluid border p-2 rounded">
+                </div>
+                <p class="small text-muted">Presenta este código QR en la entrada del evento.</p>
+                <button class="btn btn-outline-success mt-2" onclick="location.reload()">Comprar más boletos</button>
+            </div>
+        `;
+    }, 2500); 
 });
