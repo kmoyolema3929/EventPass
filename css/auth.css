@@ -1,0 +1,90 @@
+:root {
+  --ink: #1E1B3A;
+  --paper: #F6F5FB;
+  --violet: #5B3FD9;
+  --violet-dark: #4630B0;
+  --amber: #FF9F1C;
+  --line: #DAD6EC;
+}
+
+body {
+  font-family: 'Sora', system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.auth { min-height: 100vh; }
+
+/* Panel izquierdo: el borde punteado imita la perforación de un boleto */
+.auth-brand {
+  background: var(--ink);
+  color: #fff;
+  border-right: 3px dashed rgba(255, 255, 255, .3);
+}
+.auth-brand .brand {
+  color: var(--amber);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.auth-brand h1 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.auth-brand p { color: rgba(255, 255, 255, .75); max-width: 30ch; }
+
+.auth-panel { max-width: 460px; }
+.auth-panel h2 { font-weight: 700; }
+.auth-panel a { color: var(--violet); }
+
+.form-control {
+  border-color: var(--line);
+  padding: .65rem .85rem;
+}
+.form-control:focus {
+  border-color: var(--violet);
+  box-shadow: 0 0 0 .2rem rgba(91, 63, 217, .2);
+}
+
+.btn-violet {
+  background: var(--violet);
+  border-color: var(--violet);
+  color: #fff;
+  font-weight: 600;
+  padding: .7rem 1rem;
+}
+.btn-violet:hover { background: var(--violet-dark); border-color: var(--violet-dark); color: #fff; }
+.btn-violet:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+/* Selector de rol: tarjetas que se marcan al elegir */
+.role-card {
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  border: 2px solid var(--line);
+  border-radius: .5rem;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color .15s, background-color .15s;
+}
+.role-card:hover { border-color: var(--violet); }
+.role-option input:checked + .role-card {
+  border-color: var(--violet);
+  background: #EEEAFD;
+}
+.role-option input:focus-visible + .role-card {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (max-width: 991.98px) {
+  .auth { min-height: auto; }
+  .auth-brand { border-right: 0; border-bottom: 3px dashed rgba(255, 255, 255, .3); gap: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .role-card { transition: none; }
+}
