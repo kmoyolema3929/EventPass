@@ -1,0 +1,40 @@
+/* Navbar y footer compartidos por todas las páginas */
+.ep-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 12px 24px;
+  background: #1f1b3a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+.ep-nav a { color: #fff; text-decoration: none; }
+.ep-brand { font-size: 1.4rem; font-weight: bold; }
+.ep-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+.ep-links a:hover { text-decoration: underline; }
+.ep-toggle {
+  display: none;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.ep-footer {
+  margin-top: 40px;
+  padding: 20px 24px;
+  background: #1f1b3a;
+  color: #ccc;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+.ep-footer a { color: #fff; margin: 0 8px; }
+
+@media (max-width: 700px) {
+  .ep-toggle { display: block; }
+  .ep-links { display: none; flex-direction: column; width: 100%; gap: 10px; padding-top: 12px; }
+  .ep-links.abierto { display: flex; }
+}
