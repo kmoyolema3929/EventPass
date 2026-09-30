@@ -1,6 +1,9 @@
 (function () {
-  var rol = null;
-  try { rol = localStorage.getItem('rol'); } catch (e) {}
+var rol = null;
+try {
+  var sesion = JSON.parse(localStorage.getItem('eventpass_sesion'));
+  rol = sesion ? sesion.rol : null;
+} catch (e) {}
 
   var enlaces = {
     comprador: [
@@ -47,7 +50,7 @@
     var salir = document.getElementById('ep-salir');
     if (salir) {
       salir.addEventListener('click', function () {
-        try { localStorage.removeItem('rol'); } catch (e) {}
+        try { localStorage.removeItem('eventpass_sesion'); } catch (e) {}
       });
     }
   }
