@@ -54,6 +54,14 @@
         .btn-nuevo:hover {
             background-color: #0056b3;
         }
+        
+        /* Clases de estado corregidas según el Code Review */
+        .estado-activo {
+            color: #28a745;
+        }
+        .estado-pendiente {
+            color: #b8860b; /* Color mostaza oscuro para mejor contraste */
+        }
     </style>
 </head>
 <body>
@@ -77,13 +85,13 @@
                     <td>Rock Fest 2026</td>
                     <td>15/10/2026</td>
                     <td>5000</td>
-                    <td><strong style="color: #28a745;">Activo</strong></td>
+                    <td><strong class="estado-activo">Activo</strong></td>
                 </tr>
                 <tr>
                     <td>Festival Indie</td>
                     <td>22/11/2026</td>
                     <td>1500</td>
-                    <td><strong style="color: #ffc107;">Pendiente</strong></td>
+                    <td><strong class="estado-pendiente">Pendiente</strong></td>
                 </tr>
             </tbody>
         </table>
