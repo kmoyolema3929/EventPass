@@ -1,5 +1,5 @@
 # EventPass
-**Versión 1.0.0**
+**Versión 1.0.3**
 Universidad Técnica de Ambato | Facultad de Ingeniería en Sistemas, Electrónica e Industrial
 
 Sitio web para **comprar y publicar boletos de conciertos**. Tiene dos roles:
