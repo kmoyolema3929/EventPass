@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Conciertos - Detalles del Evento</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/boletos.css">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- SECCIÓN DE DETALLES DEL CONCIERTO (PR 1 - Julio Zurita) -->
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-md-12 mb-4">
+        <a href="index.html" class="btn btn-outline-warning btn-sm mb-3">&larr; Volver al inicio</a>
+        <h1 class="fw-bold text-warning display-5">World Music Festival 2026</h1>
+        <p class="text-muted fs-5">📅 15 de Octubre, 2026 | 📍 Estadio Metropolitano</p>
+        <p class="lead mt-3">Disfruta de una noche inolvidable con los mejores exponentes de la música electrónica en vivo. Asegura tu lugar con anticipación y vive la experiencia al máximo.</p>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <!-- Columna de Información y Precios -->
+      <div class="col-md-6">
+        <h3 class="text-warning mb-3">Localidades y Precios</h3>
+        <table class="table table-dark table-bordered table-hover align-middle">
+          <thead class="table-warning text-dark">
+            <tr>
+              <th>Localidad</th>
+              <th>Precio</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>VIP Gold (Cancha)</strong></td>
+              <td>$120.00</td>
+              <td><span class="badge bg-success">Disponible</span></td>
+            </tr>
+            <tr>
+              <td><strong>Platea Preferencial</strong></td>
+              <td>$80.00</td>
+              <td><span class="badge bg-success">Disponible</span></td>
+            </tr>
+            <tr>
+              <td><strong>General</strong></td>
+              <td>$40.00</td>
+              <td><span class="badge bg-warning text-dark">Últimos boletos</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Espacio reservado temporalmente para el PR 2 de Multimedia -->
+      <!-- Columna Multimedia (PR 2) -->
+          <div class="col-md-6">
+            <h3 class="text-warning mb-3">Galería y Multimedia</h3>
+            <!-- Imagen oficial del repositorio -->
+            <img src="img/concierto1.jpg" alt="Concierto destacado" class="img-fluid rounded shadow mb-4">
+            
+            <h5 class="text-warning mt-3">Video Promocional Oficial</h5>
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video promocional" allowfullscreen></iframe>
+            </div>
+          </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/boletos.js"></script>
+</body>
+</html>

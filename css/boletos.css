@@ -1,0 +1,29 @@
+
+.zona-tarjeta {
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.zona-tarjeta:hover {
+    border-color: #0d6efd;
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.zona-tarjeta h5 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.zona-tarjeta p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}

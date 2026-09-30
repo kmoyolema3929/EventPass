@@ -1,0 +1,38 @@
+/* Ajuste de altura e imágenes para el carrusel principal */
+.carousel-img {
+  height: 520px;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+/* Formato de la tarjeta flotante sobre la imagen */
+.carousel-caption {
+  bottom: 2.5rem;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===================================================
+   Estilos PR 2 - Cartelera de Eventos y Buscador
+   =================================================== */
+
+/* Marcador de posición claro para la barra de búsqueda */
+.search-input::placeholder {
+  color: #adb5bd;
+}
+
+/* Ajuste de altura fija y encuadre para las imágenes de las tarjetas */
+.card-event-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Efecto hover al pasar sobre cada tarjeta */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+}

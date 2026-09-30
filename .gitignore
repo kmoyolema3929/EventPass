@@ -1,20 +1,27 @@
 # ==== Node.js ====
+# Dependencias que se recrean con "npm install"; pesan mucho
 node_modules/
+# Registros de errores al instalar paquetes
 npm-debug.log
 yarn-error.log
+# Variables de entorno: pueden tener claves o contraseñas
 .env
 
 # ==== Python ====
+# Bytecode que Python regenera solo al ejecutar
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.env/
+# Entornos virtuales: dependen de cada computadora
 .venv/
+venv/
+# Carpetas generadas al compilar o empaquetar
 build/
 dist/
 
 # ==== Java ====
+# Archivos compilados que se generan desde el código fuente
 *.class
 *.jar
 *.war
@@ -22,7 +29,8 @@ dist/
 target/
 *.log
 
-# ==== General ====
+# ==== Editores y sistema operativo ====
+# Configuración personal de cada integrante
 .DS_Store
 Thumbs.db
 .idea/

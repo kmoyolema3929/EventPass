@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Nuevo Concierto - EventPass</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Publicar Concierto</h2>
+        <form action="#" method="POST">
+            <!-- Campo Nombre -->
+            <div class="form-group">
+                <label for="nombre">Nombre del Concierto:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Rock Fest 2026">
+            </div>
+
+            <!-- Campo Fecha -->
+            <div class="form-group">
+                <label for="fecha">Fecha del Evento:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <!-- Campo Aforo -->
+            <div class="form-group">
+                <label for="aforo">Aforo (Capacidad):</label>
+                <input type="number" id="aforo" name="aforo" min="1" required placeholder="Ej. 5000">
+            </div>
+
+            <!-- Botón -->
+            <button type="submit">Publicar Evento</button>
+        </form>
+    </div>
+
+</body>
+</html>
