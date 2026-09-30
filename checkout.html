@@ -6,10 +6,13 @@
     <title>Comprar Boletos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/boletos.css">
+    <link rel="stylesheet" href="css/layout.css">
 </head>
-<body class="bg-light">
+<body class="bg-light d-flex flex-column min-vh-100">
+    <!-- Navbar compartido -->
+    <div id="navbar"></div>
 
-<div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5 flex-grow-1">
     <h2 class="mb-4 text-center" id="titulo-concierto">Selección de Entradas</h2>
     
     <div class="row">
@@ -32,12 +35,17 @@
                 </div>
             </div>
             
-            <!-- Aquí irá tu formulario de pago para el PR 2 -->
+            <!-- Botón de pago -->
             <button class="btn btn-success w-100 py-2">Ir a Pagar</button>
         </div>
     </div>
 </div>
 
+<!-- Footer compartido con margen automático superior -->
+<div id="footer" class="mt-auto"></div>
+
+<!-- Scripts -->
 <script src="js/boletos.js"></script>
+<script src="js/layout.js"></script>
 </body>
 </html>
