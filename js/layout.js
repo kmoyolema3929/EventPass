@@ -11,7 +11,7 @@
     ],
     publicador: [
       ['Inicio', 'index.html'],
-      ['Publicar concierto', 'publicar.html'],
+      ['Publicar concierto', 'publicar-concierto.html'],
       ['Mi panel', 'dashboard.html'],
       ['Mi perfil', 'perfil.html']
     ],
